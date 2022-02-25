@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seashore | Home</title>
+    <!-- Scroll reveal-->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <!-- remix icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- Custom CSS -->
@@ -18,21 +20,21 @@
         <div class="nav-mobile">
           <ul class="list">
             <li class="list-item">
-              <a href="#" class="list-link current">Home</a>
+              <a href="#showcase" class="list-link current">Home</a>
             </li>
             <li class="list-item">
-              <a href="#" class="list-link">Destinations</a>
+              <a href="#popular-destinations" class="list-link">Destinations</a>
             </li>
             <li class="list-item">
-              <a href="#" class="list-link">Plan Trip</a>
+              <a href="#plan-trip" class="list-link">Plan Trip</a>
             </li>
             <li class="list-item lg-screen-hidden">
-              <a href="#" class="list-link">Book now</a>
+              <a href="#newsletter" class="list-link">Book now</a>
             </li>
           </ul>
         </div>
 
-        <a href="#" class="btn sm-screen-hidden">Book now</a>
+        <a href="#newsletter" class="btn sm-screen-hidden">에약하기</a>
 
         <div class="menu-toggle-icon lg-screen-hidden place-items-center" id="menu-toggle-icon">
           <i class="ri-menu-3-line menu-open-icon"></i>
@@ -47,10 +49,12 @@
       <section class="showcase section" id="showcase">
         <div class="showcase-container container d-grid">
           <div class="showcase-data order-2">
-            <span class="tagline">Begin the journey</span>
-            <h1 class="title main-title">Heal your soul at the <span class="accent-text">beach</span></h1>
-            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ipsa quidem veniam modi ipsam!</p>
-            <a href="#" class="btn">Explore</a>
+            <span class="tagline">지금 당장 여행을 떠나세요!</span>
+            <h1 class="title main-title">
+              해변에서 <span class="accent-text"><br />힐링</span>하기
+            </h1>
+            <p class="description">바다를 보며 일상에서 벗어나 즐거운 한 때를 보내세요</p>
+            <a href="#" class="btn">더 알아보기</a>
           </div>
           <div class="image-group order-1 d-grid">
             <div class="image-box image-left">
@@ -69,25 +73,25 @@
       <!-- popular - destinations -->
       <section class="popular-destinations section" id="popular-destinations">
         <div class="popular-destinations-container container d-grid">
-          <div class="popular-destinations-data order-2">
-            <span class="tagline">Popular destinations</span>
-            <h2 class="title">Beaches with the most <span class="accent-text">visitors</span> this year</h2>
-            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ipsa quidem veniam modi ipsam!</p>
-            <a href="#" class="btn">Explore</a>
+          <div class="popular-destinations-data">
+            <span class="tagline">인기 여행지</span>
+            <h2 class="title">2021년 <br /><span class="accent-text">가장 많은</span><br />관광객들이 모인 해변</h2>
+            <p class="description">작년부터 이번 해까지 <br />관광객들이 선택한 인기 여행지를 알아보세요</p>
+            <a href="#" class="btn">더 알아보기</a>
           </div>
 
           <div class="beach-data-wrapper image-box">
             <div class="beach-data">
               <div class="beach-data-inner width-50">
-                <h3 class="beach-name">Sunset Beach Park</h3>
+                <h3 class="beach-name">선셋 비치 파크</h3>
                 <span class="beach-location">
                   <span class="accent-text">
                     <i class="ri-map-pin-line"></i>
                   </span>
-                  Pupukea, HI, USA
+                  푸푸케아, 하와이 주, 미국
                 </span>
               </div>
-              <a href="#" class="btn palce-items-center">
+              <a href="#" class="btn place-items-center">
                 <i class="ri-arrow-right-s-line"></i>
               </a>
             </div>
@@ -97,30 +101,12 @@
             <div class="beach-data-wrapper image-box image-box-left">
               <div class="beach-data">
                 <div class="beach-data-inner">
-                  <h3 class="beach-name">Mantria Beach</h3>
+                  <h3 class="beach-name">훌후말레 해변</h3>
                   <span class="beach-location">
                     <span class="accent-text">
                       <i class="ri-map-pin-line"></i>
                     </span>
-                    Bora Bora, French Polynesia
-                  </span>
-                </div>
-                <a href="#" class="btn place-items-center">
-                  <i class="ri-arrow-right-s-line"></i>
-                </a>
-              </div>
-              <img src="./img/bora-bora-beach.jpg" alt="" />
-            </div>
-
-            <div class="beach-data-wrapper image-box image-box-center">
-              <div class="beach-data">
-                <div class="beach-data-inner width-50">
-                  <h3 class="beach-name">Hulhumale beach</h3>
-                  <span class="beach-location">
-                    <span class="accent-text">
-                      <i class="ri-map-pin-line"></i>
-                    </span>
-                    Male, Maldives
+                    말레, 몰디브
                   </span>
                 </div>
                 <a href="#" class="btn place-items-center">
@@ -130,15 +116,33 @@
               <img src="./img/maldives-beach.jpg" alt="" />
             </div>
 
-            <div class="beach-data-wrapper image-box image-box-right">
+            <div class="beach-data-wrapper image-box image-box-center">
               <div class="beach-data">
-                <div class="beach-data-inner">
-                  <h3 class="beach-name">Grace Bay Beach</h3>
+                <div class="beach-data-inner width-50">
+                  <h3 class="beach-name">마티라 비치</h3>
                   <span class="beach-location">
                     <span class="accent-text">
                       <i class="ri-map-pin-line"></i>
                     </span>
-                    Turks and Caicos
+                    보라보라, 프랑스령 폴리네시아
+                  </span>
+                </div>
+                <a href="#" class="btn place-items-center">
+                  <i class="ri-arrow-right-s-line"></i>
+                </a>
+              </div>
+              <img src="./img/bora-bora-beach.jpg" alt="" />
+            </div>
+
+            <div class="beach-data-wrapper image-box image-box-right">
+              <div class="beach-data">
+                <div class="beach-data-inner">
+                  <h3 class="beach-name">그레이스 베이 비치</h3>
+                  <span class="beach-location">
+                    <span class="accent-text">
+                      <i class="ri-map-pin-line"></i>
+                    </span>
+                    터크스 케이커스 제도
                   </span>
                 </div>
                 <a href="#" class="btn place-items-center">
@@ -156,10 +160,10 @@
       <section class="plan-trip section" id="plan-trip">
         <div class="plan-trip-container container d-grid">
           <div class="plan-trip-data">
-            <span class="tagline">Planning your trip</span>
-            <h2 class="title">Let's <span class="accent-text">explore</span> your dream beach now!</h2>
-            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ipsa quidem veniam modi ipsam!</p>
-            <a href="#" class="btn">Explore</a>
+            <span class="tagline">여행 계획 짜기</span>
+            <h2 class="title">당신이 <span class="accent-text">꿈꾸던</span> <br />해변을 지금 가보세요</h2>
+            <p class="description">더 이상 미루지 마세요!<br />지금 당장 여행 계획을 짜보세요</p>
+            <a href="#" class="btn">더 알아보기</a>
           </div>
           <div class="beach-data-wrapper image-box">
             <img src="./img/plan-trip-image.jpg" alt="" />
@@ -172,14 +176,17 @@
       <section class="newsletter section" id="newsletter">
         <div class="newsletter-container container">
           <div class="newsletter-container-inner">
-            <h2 class="title">Subscribe now to get the latest Seashore news. Or start planning your trip by getting a quote today!</h2>
+            <h2 class="title">
+              Seashore 최근 뉴스를 구독하거나 <br />
+              지금 여행을 예약하세요!
+            </h2>
             <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum quasi architecto, laudantium sequi itaque praesentium odio quos, aliquam
-              dolorem, blanditiis debitis similique!
+              Seashore은 해변 여행에 빠질 수 없는 <br />각종 서핑, 액티비티 등 유용한 정보들을 제공합니다.<br />여러 행사상품과 함께 정보를 얻으시려면 구독을
+              해주세요.
             </p>
             <div class="btn-group">
-              <a href="#" class="btn btn-light">Subscribe now</a>
-              <a href="#" class="btn">Get to a quote</a>
+              <a href="#" class="btn btn-light">구독하기</a>
+              <a href="#" class="btn">예약하기</a>
             </div>
           </div>
         </div>
@@ -190,65 +197,65 @@
     <footer class="footer section">
       <div class="footer-container container">
         <div class="footer-container-inner d-grid">
-          <div>
-            <h6 class="title footer-title">Company</h6>
+          <div class="company-data">
+            <h6 class="title footer-title">필리핀/태국</h6>
             <ul class="list">
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">보라카이 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">세부 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">보홀 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">코사무이 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">푸켓 지사</a>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h6 class="title footer-title">Company</h6>
+          <div class="company-data">
+            <h6 class="title footer-title">유럽/북미</h6>
             <ul class="list">
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">피지 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">하와이 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">그리스 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">이탈리아 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">나파밸리 지사</a>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h6 class="title footer-title">Company</h6>
+          <div class="company-data">
+            <h6 class="title footer-title">기타</h6>
             <ul class="list">
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">세이셸 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">몰디브 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">발리 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">칸쿤 지사</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">Sample link</a>
+                <a href="#" class="list-link">타히티 지사</a>
               </li>
             </ul>
           </div>
@@ -261,29 +268,31 @@
               <a href="tel:800-555-555" class="underline">(800) 555-555</a>
               <a href="mailto:" class="underline">email@email.com</a>
             </address>
-            <ul class="list">
-              <li class="list-item">
-                <a href="#" class="list-link">
-                  <i class="ri-facebook-circle-line"></i>
-                </a>
-              </li>
-              <li class="list-item">
-                <a href="#" class="list-link">
-                  <i class="ri-instagram-line"></i>
-                </a>
-              </li>
-              <li class="list-item">
-                <a href="#" class="list-link">
-                  <i class="ri-twitter-line"></i>
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
 
         <hr class="footer-separator" />
+        <div class="sns-copy-data">
+          <ul class="list sns-btn">
+            <li class="list-item">
+              <a href="#" class="list-link">
+                <i class="ri-facebook-circle-line"></i>
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">
+                <i class="ri-instagram-line"></i>
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">
+                <i class="ri-twitter-line"></i>
+              </a>
+            </li>
+          </ul>
 
-        <span class="copyright">&copy; 2022 Seashore Inc. All rights reserved</span>
+          <span class="copyright">&copy; 2022 Seashore Inc. All rights reserved</span>
+        </div>
       </div>
     </footer>
 

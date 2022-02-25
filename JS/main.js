@@ -3,7 +3,7 @@
 const menuToggleIcon = document.getElementById("menu-toggle-icon");
 const navMobile = document.getElementById("nav");
 const headerElement = document.getElementById("header");
-// const menuToggleIcon = document.getElementById("menu-toggle-icon");
+const navLinks = document.querySelectorAll(".nav-mobile .list-link");
 
 //네비게이션 토글
 const toggleMenu = () => {
@@ -23,3 +23,47 @@ const headerScrolleEvent = () => {
 };
 
 window.addEventListener("scroll", headerScrolleEvent);
+
+//nav메뉴를 클릭하면 mobile nav메뉴창 닫히게 하기
+navLinks.forEach((link) =>
+  link.addEventListener("click", () => {
+    navMobile.classList.remove("active");
+    headerElement.classList.remove("active");
+
+    let current = document.getElementsByClassName("current");
+    current[0].className = current[0].className.replace(" current", "");
+    link.className += " current";
+  })
+);
+
+//Scroll reveal
+const sr = ScrollReveal({
+  distance: "25px",
+  duration: 2500,
+});
+
+sr.reveal(`.image-left, .popular-destinations-data, .plan-trip-data`, {
+  origin: "left",
+});
+
+sr.reveal(".image-center", {
+  origin: "bottom",
+});
+
+sr.reveal(`.image-right, .showcase-data`, {
+  origin: "right",
+});
+
+sr.reveal(".beach-data-wrapper", {
+  origin: "bottom",
+  interval: 250,
+});
+
+sr.reveal(".newsletter-container", {
+  origin: "top",
+});
+
+sr.reveal(`.footer-container-inner > div, .footer-separator, .sns-copy-data`, {
+  origin: "bottom",
+  interval: 250,
+});
